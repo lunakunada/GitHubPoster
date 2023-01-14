@@ -43,7 +43,7 @@ class TwitterLoader(BaseLoader):
         self.c.Since = f"{self.from_year}-01-01"
         self.c.Until = f"{self.to_year}-12-31"
         self.c.Native_retweets  = True
-        self.c.User_full = True
+        self.c.Profile_full = True
         #twint.run.Search(self.c)
         twint.run.Profile(self.c)
         return twint.output.tweets_list
